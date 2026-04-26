@@ -1,0 +1,100 @@
+/* 🌌 COULEURS PRINCIPALES (modifiable ici) */
+:root {
+  --black: #0a0a0a;
+  --violet: #7b2cbf;
+  --blue: #3a86ff;
+}
+
+/* RESET */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, var(--black), var(--violet), var(--blue));
+  color: white;
+  text-align: center;
+}
+
+/* PAGES */
+.page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
+}
+
+/* LOGIN */
+.login-box {
+  background: rgba(0,0,0,0.7);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 200px;
+}
+
+button {
+  background: var(--violet);
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: var(--blue);
+}
+
+/* PHOTO */
+.photo {
+  width: 200px;
+  border-radius: 50%;
+  margin: 20px;
+  animation: fadeIn 2s;
+}
+
+/* TEXTE */
+.love-text p {
+  animation: fadeIn 3s;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* COEURS */
+.hearts::before {
+  content: "❤️ 💜 💙 ❤️ 💜 💙";
+  position: absolute;
+  animation: float 5s infinite;
+}
+
+@keyframes float {
+  0% {transform: translateY(0);}
+  100% {transform: translateY(-200px);}
+}
+
+/* COMMENTAIRE */
+.comment-section {
+  margin-top: 20px;
+}
+
+textarea {
+  width: 250px;
+  height: 80px;
+}
+
+#comments {
+  margin-top: 10px;
+}
