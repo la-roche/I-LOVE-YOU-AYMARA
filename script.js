@@ -4,13 +4,13 @@ function checkLogin() {
   const error = document.getElementById("errorMsg");
 
   if (
-    (name === "MAYMARA" || name === "mon Diamant Noir") &&
-    code === "1 2 3 soleil"
+    (name === "Mon rochue" || name === "Maymara") &&
+    code === "123soleil"
   ) {
     document.getElementById("loginPage").classList.add("hidden");
     document.getElementById("mainPage").classList.remove("hidden");
   } else {
-    error.textContent = "Hmm... ce n’est pas toi mon amour 💔";
+    error.textContent = "Hmm... petit(e) ce n’est pas toi mon amour 💔";
   }
 }
 
