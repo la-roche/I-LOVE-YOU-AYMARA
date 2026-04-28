@@ -3,61 +3,166 @@
 <head>
   <meta charset="UTF-8">
   <title>Pour AYMARA ❤️</title>
-  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background-color: #fcf5f7;
+      font-family: 'Georgia', serif;
+      color: #4a4a4a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .page {
+      display: none;
+      width: 100%;
+      max-width: 700px;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      border-left: 5px solid #d4a5a5;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #b56576;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      font-family: inherit;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      border-radius: 8px;
+      background-color: #b56576;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #944e5f;
+    }
+
+    .photo {
+      width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    .love-text {
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    .signature {
+      margin-top: 40px;
+      text-align: right;
+    }
+
+    .signature span {
+      font-size: 20pt;
+      color: #b56576;
+      font-family: 'Brush Script MT', cursive;
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    #errorMsg {
+      color: red;
+      text-align: center;
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- ================= PAGE LOGIN ================= -->
+<!-- ================= LOGIN ================= -->
 <div id="loginPage" class="page active">
-  <div class="login-box">
+  <div class="container">
     <h2>💜 Qui es-tu ?</h2>
 
     <input type="text" id="nameInput" placeholder="Entre ton nom...">
     <input type="password" id="codeInput" placeholder="Code secret...">
 
     <button onclick="checkLogin()">Entrer ❤️</button>
-
     <p id="errorMsg"></p>
   </div>
 </div>
 
 <!-- ================= PAGE PRINCIPALE ================= -->
-<div id="mainPage" class="page hidden">
+<div id="mainPage" class="page">
+  <div class="container">
 
-  <h1 class="fade-in">Bienvenue mon Diamant Noir 💎</h1>
+    <h1>Bienvenue mon Diamant Noir 💎</h1>
 
-  <!-- 💡 PHOTO -->
-  <!-- 👉 Remplace "photo.jpg" par ton image -->
-  <img src="photo.jpg" alt="AYMARA" class="photo">
+    <img src="photo.jpg" alt="AYMARA" class="photo">
 
-  <!-- 💖 MESSAGE -->
-  <div class="love-text">
-    <p>AYMARA, tu es la lumière dans mon obscurité 💜</p>
-    <p>Chaque moment avec toi est un cadeau 💙</p>
-    <p>Tu es belle, douce et unique ❤️</p>
-    <p>Je t'aime infiniment tn Rochue d'amour </p>
+    <div class="love-text">
+      <h3>AYMARA, MY LOVE 💜</h3>
+
+      <p>
+        Chaque moment avec toi est un cadeau 💙. Depuis que tu es dans ma vie,
+        tout a pris une autre dimension. Ton sourire illumine mes journées
+        et ton amour me donne la force d’avancer.
+      </p>
+
+      <p>
+        Je veux construire avec toi quelque chose de vrai, de fort,
+        et d’éternel. Tu es ma paix, mon bonheur, et mon avenir.
+      </p>
+
+      <p style="font-style: italic; border-left: 3px solid #f2dada; padding-left: 15px;">
+        Peu importe les tempêtes, je veux toujours te tenir la main ❤️
+      </p>
+    </div>
+
+    <!-- 🎵 MUSIQUE -->
+    <audio controls autoplay loop>
+      <source src="La Roche.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- 💬 COMMENTAIRE -->
+    <div style="margin-top: 30px;">
+      <h3>Laisse-moi un mot bae 💌</h3>
+      <textarea id="commentInput" placeholder="Écris ici..."></textarea>
+      <button onclick="addComment()">Envoyer</button>
+      <div id="comments"></div>
+    </div>
+
+    <!-- SIGNATURE -->
+    <div class="signature">
+      <p>Avec toute ma tendresse,</p>
+      <span>Ton Roche ❤️</span>
+    </div>
+
   </div>
-
-  <!-- ❤️ COEURS -->
-  <div class="hearts"></div>
-
-  <!-- 🎵 MUSIQUE -->
-  <!-- 👉 Remplace music.mp3 -->
-  <audio controls autoplay loop>
-    <source src="La Roche.mp3" type="audio/mpeg">
-  </audio>
-
-  <!-- 💬 COMMENTAIRE -->
-  <div class="comment-section">
-    <h3>Laisse-moi un mot bae 💌</h3>
-    <textarea id="commentInput" placeholder="Écris ici..."></textarea>
-    <button onclick="addComment()">Envoyer</button>
-
-    <div id="comments"></div>
-  </div>
-
 </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
